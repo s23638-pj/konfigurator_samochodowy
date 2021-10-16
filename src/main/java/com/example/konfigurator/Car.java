@@ -8,12 +8,7 @@ public class Car {
     private boolean fourWheelDrive;
     int wheels;
 
-    private void spare(){
-        wheels += 1;
-        if (wheels > 5){
-            System.out.println("Too much");
-        }
-    }
+
 /*
     public Car(){
         this.mark = mark;
@@ -42,7 +37,7 @@ public class Car {
         public boolean getFourWheelDrive() {
             return fourWheelDrive;
         }
-        public int wheels() {
+        public int getWheels() {
             return wheels;
         }
 
