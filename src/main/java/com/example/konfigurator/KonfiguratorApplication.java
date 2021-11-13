@@ -1,15 +1,17 @@
 package com.example.konfigurator;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 
 @SpringBootApplication
 public class KonfiguratorApplication {
 
-
+	@Autowired
 	public static void main(String[] args) {
 		SpringApplication.run(KonfiguratorApplication.class, args);
-
+/*
 		Car tesla = new Car();
 		tesla.setMark("Tesla");
 		tesla.setModel("Model S");
@@ -20,8 +22,7 @@ public class KonfiguratorApplication {
 
 
 
-		System.out.println(tesla);
-
+		System.out.println(tesla);*/
 	}
 
 }

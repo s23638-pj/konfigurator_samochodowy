@@ -1,6 +1,17 @@
 package com.example.konfigurator;
 
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+
 public class Car {
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private Long id;
     private String mark;
     private String model;
     private String colour;
@@ -8,9 +19,12 @@ public class Car {
     private boolean fourWheelDrive;
     int wheels;
 
+    public Car(){
 
+    };
 /*
     public Car(){
+        private Long id;
         this.mark = mark;
         this.model = model;
         this.colour = colour;
@@ -19,8 +33,13 @@ public class Car {
         this.wheels = wheels;
 
     }
+  */
 
-*/
+
+    public Car(String tesla, int i, String bialy, int i1) {
+    }
+
+
     public String getMark() {
             return mark;
         }
@@ -65,5 +84,17 @@ public class Car {
         public void setWheels(int newWheels) {
             this.wheels = newWheels;
         }
+
+        @Override
+        public String toString() {
+            return "Car{" +
+                    "marka='" + mark + '\'' +
+                    "model='" + model + '\'' +
+                    ", colour=" + colour +
+                    ", range='" + range + '\'' +
+                    ", fourWheelDrive=" + fourWheelDrive +
+                    ", wheels=" + wheels +
+                    '}';
+    }
 
 }
